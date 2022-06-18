@@ -12,91 +12,55 @@ enum FormValidationError : Error {
     case invalidDate
 }
 
-class SomeClass: ObservableObject {
-
+enum FocusField {
+    case nameField
 }
 
 struct AddBirthdayForm: View {
-    @State var userName: String
-    @State var birthDate: Date
-    @State var isFavorite: Bool
 
-    var isValidForm: Bool {
-        return !userName.isEmpty && birthDate != Date.distantPast
-    }
-
-
+    @ObservedObject var birthDayEntry: BirthDayEntry
 
     @State private var didUserSelectDate = false
 
-//    func validateForm() -> Result<Bool,FormValidationError> {
-//        if isValidName() && isValidDate() {
-//            return .success(true)
-//        }
-//
-//        if !isValidDate() {
-//            return .failure(.invalidDate)
-//        }
-//
-//        return .failure(.invalidName)
-//    }
+    @FocusState var currentlyFocussedField: Bool
 
     var body: some View {
 
         Form {
-            Section(header: Text("Preview")) {
-                ListItemView(listItem: BirthdayItem(birthDayModel:
-                                                        Birthday(
-                                                            name: userName.isEmpty ? " " : userName,
-                                                            birthDay:birthDate,
-                                                            isFavorite: isFavorite)))
-            }
-
             Section(header: Text("Name")) {
                 TextField("Name",
-                          text: $userName,
+                          text: $birthDayEntry.name,
                           prompt: Text("Name goes here"))
-            }.listRowBackground(Color(white: 0.9))
-
-
+                .focused($currentlyFocussedField)
+            }
+            
             Section(header: Text("Birthday")) {
-                DatePicker("Date of Birth", selection: $birthDate,
+                DatePicker("Date of Birth", selection: $birthDayEntry.birthDate,
                            in:  Date(timeIntervalSince1970: 0)...Date(),
                            displayedComponents: [.date])
                 .datePickerStyle(.compact)
-                .onChange(of: birthDate) { newValue in
+                .onChange(of: birthDayEntry.birthDate) { newValue in
                     didUserSelectDate = true
                 }
-            }.listRowBackground(Color(white: 0.9))
-
+            }
 
             Section {
                 HStack {
-                    Toggle(isOn: $isFavorite) {
+                    Toggle(isOn: $birthDayEntry.isFavorite) {
                         Text("Favorite")
                     }
                 }
             }
-//            Section {
-//                HStack {
-//                Spacer()
-//
-//                    Button {
-//                        // handle tap on button
-//                    } label: {
-//                        Text("Add Birthday")
-//                    }
-//
-//                Spacer()
-//                //.disabled(userName.count < 3 || !didUserSelectDate)
-//            }
-//            }
+        }.onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                currentlyFocussedField = true
+            }
         }
     }
 }
 
 struct AddBirthdayForm_Previews: PreviewProvider {
     static var previews: some View {
-        AddBirthdayForm(userName: "",birthDate: Date.init(timeIntervalSince1970: 0), isFavorite: true)
+        AddBirthdayForm(birthDayEntry: BirthDayEntry(name: "Test1", birthDate: Date()))
     }
 }

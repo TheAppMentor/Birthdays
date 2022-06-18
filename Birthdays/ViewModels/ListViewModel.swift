@@ -23,7 +23,7 @@ protocol ListSection : Identifiable {
     var items: [ListItemType] { get }
 }
 
-protocol ListViewModel : ObservableObject,Identifiable {
+protocol ListViewModel : ObservableObject, Identifiable {
     associatedtype Sec : ListSection
     associatedtype P : PersistenceManager
 

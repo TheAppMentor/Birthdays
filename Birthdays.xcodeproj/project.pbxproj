@@ -8,18 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2F07C56327C38ED60049AC6C /* BirthdaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F07C56227C38ED60049AC6C /* BirthdaysApp.swift */; };
-		2F07C56527C38ED60049AC6C /* CustomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F07C56427C38ED60049AC6C /* CustomListView.swift */; };
+		2F07C56527C38ED60049AC6C /* SimpleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F07C56427C38ED60049AC6C /* SimpleListView.swift */; };
 		2F07C56727C38EDD0049AC6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F07C56627C38EDD0049AC6C /* Assets.xcassets */; };
 		2F07C56A27C38EDD0049AC6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F07C56927C38EDD0049AC6C /* Preview Assets.xcassets */; };
 		2F19C6A327F471BE008DA514 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19C6A227F471BE008DA514 /* DateUtils.swift */; };
-		2F19C6A827F4723E008DA514 /* ContactListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19C6A727F4723E008DA514 /* ContactListViewModel.swift */; };
 		2F19C6AA27F47269008DA514 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19C6A927F47269008DA514 /* ListViewModel.swift */; };
 		2F4E65B327C3B1020002798A /* BirthDayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E65B227C3B1020002798A /* BirthDayListViewModel.swift */; };
 		2F4E65B527C3D3810002798A /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E65B427C3D3810002798A /* PersistenceManager.swift */; };
 		2F4E65B927C419250002798A /* AddItemSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E65B827C419250002798A /* AddItemSheetView.swift */; };
 		2FA9004A27F8CC37005E1EDF /* BDayPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA9004927F8CC37005E1EDF /* BDayPersistenceManager.swift */; };
-		2FA9004C27F8CFE8005E1EDF /* ContactPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA9004B27F8CFE8005E1EDF /* ContactPersistenceManager.swift */; };
-		2FA9004E27F8D038005E1EDF /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA9004D27F8D038005E1EDF /* Contact.swift */; };
 		2FEA40E2285B735700FCA349 /* AddBirthdayForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA40E1285B735700FCA349 /* AddBirthdayForm.swift */; };
 		2FF839F327CBC9B80056DA14 /* AddItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF839F227CBC9B80056DA14 /* AddItemButton.swift */; };
 		2FF839F527CD5DF90056DA14 /* Birthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF839F427CD5DF80056DA14 /* Birthday.swift */; };
@@ -28,18 +25,15 @@
 /* Begin PBXFileReference section */
 		2F07C55F27C38ED60049AC6C /* Birthdays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birthdays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F07C56227C38ED60049AC6C /* BirthdaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysApp.swift; sourceTree = "<group>"; };
-		2F07C56427C38ED60049AC6C /* CustomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListView.swift; sourceTree = "<group>"; };
+		2F07C56427C38ED60049AC6C /* SimpleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleListView.swift; sourceTree = "<group>"; };
 		2F07C56627C38EDD0049AC6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F07C56927C38EDD0049AC6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F19C6A227F471BE008DA514 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
-		2F19C6A727F4723E008DA514 /* ContactListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewModel.swift; sourceTree = "<group>"; };
 		2F19C6A927F47269008DA514 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		2F4E65B227C3B1020002798A /* BirthDayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDayListViewModel.swift; sourceTree = "<group>"; };
 		2F4E65B427C3D3810002798A /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		2F4E65B827C419250002798A /* AddItemSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemSheetView.swift; sourceTree = "<group>"; };
 		2FA9004927F8CC37005E1EDF /* BDayPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDayPersistenceManager.swift; sourceTree = "<group>"; };
-		2FA9004B27F8CFE8005E1EDF /* ContactPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPersistenceManager.swift; sourceTree = "<group>"; };
-		2FA9004D27F8D038005E1EDF /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		2FEA40E1285B735700FCA349 /* AddBirthdayForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthdayForm.swift; sourceTree = "<group>"; };
 		2FF839F227CBC9B80056DA14 /* AddItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemButton.swift; sourceTree = "<group>"; };
 		2FF839F427CD5DF80056DA14 /* Birthday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthday.swift; sourceTree = "<group>"; };
@@ -108,7 +102,6 @@
 			children = (
 				2F19C6A927F47269008DA514 /* ListViewModel.swift */,
 				2F4E65B227C3B1020002798A /* BirthDayListViewModel.swift */,
-				2F19C6A727F4723E008DA514 /* ContactListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -116,7 +109,7 @@
 		2F19C6A627F471F8008DA514 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2F07C56427C38ED60049AC6C /* CustomListView.swift */,
+				2F07C56427C38ED60049AC6C /* SimpleListView.swift */,
 				2FF839F227CBC9B80056DA14 /* AddItemButton.swift */,
 				2FEA40E1285B735700FCA349 /* AddBirthdayForm.swift */,
 				2F4E65B827C419250002798A /* AddItemSheetView.swift */,
@@ -128,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				2FF839F427CD5DF80056DA14 /* Birthday.swift */,
-				2FA9004D27F8D038005E1EDF /* Contact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,7 +130,6 @@
 			children = (
 				2F4E65B427C3D3810002798A /* PersistenceManager.swift */,
 				2FA9004927F8CC37005E1EDF /* BDayPersistenceManager.swift */,
-				2FA9004B27F8CFE8005E1EDF /* ContactPersistenceManager.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -213,15 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FA9004E27F8D038005E1EDF /* Contact.swift in Sources */,
-				2F07C56527C38ED60049AC6C /* CustomListView.swift in Sources */,
+				2F07C56527C38ED60049AC6C /* SimpleListView.swift in Sources */,
 				2FEA40E2285B735700FCA349 /* AddBirthdayForm.swift in Sources */,
 				2F07C56327C38ED60049AC6C /* BirthdaysApp.swift in Sources */,
-				2FA9004C27F8CFE8005E1EDF /* ContactPersistenceManager.swift in Sources */,
 				2F4E65B327C3B1020002798A /* BirthDayListViewModel.swift in Sources */,
 				2FA9004A27F8CC37005E1EDF /* BDayPersistenceManager.swift in Sources */,
 				2F19C6A327F471BE008DA514 /* DateUtils.swift in Sources */,
-				2F19C6A827F4723E008DA514 /* ContactListViewModel.swift in Sources */,
 				2F4E65B527C3D3810002798A /* PersistenceManager.swift in Sources */,
 				2F4E65B927C419250002798A /* AddItemSheetView.swift in Sources */,
 				2FF839F527CD5DF90056DA14 /* Birthday.swift in Sources */,
@@ -357,7 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Birthdays/Preview Content\"";
-				DEVELOPMENT_TEAM = TLV25NDMDF;
+				DEVELOPMENT_TEAM = 9U4MHGA4K2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -386,7 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Birthdays/Preview Content\"";
-				DEVELOPMENT_TEAM = TLV25NDMDF;
+				DEVELOPMENT_TEAM = 9U4MHGA4K2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

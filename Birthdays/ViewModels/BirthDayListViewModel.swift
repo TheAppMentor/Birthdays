@@ -37,8 +37,7 @@ class BirthdayItemsSection : ListSection {
 }
 
 class BirthdayListViewModel<P: PersistenceManager> : ListViewModel {
-    
-    
+
     var id: UUID = UUID()
     var title: String
     var persistenceManager: P

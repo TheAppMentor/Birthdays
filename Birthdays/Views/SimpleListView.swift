@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomListView<LVM: ListViewModel>: View {
+struct SimpleListView<LVM: ListViewModel>: View {
     
     var listViewModel: LVM
     
@@ -22,15 +22,8 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
         let bVM = BirthdayListViewModel(title: "Bir", persistenceManager: BDayArrayPersistenceManager())
-        
-//        let contactsLVM = ContactListViewModel(contactListSections: [ContactsListItemSection(
-//            header: "Contacts", items: [
-//            ContactItem(title: "Mr A of B", subTitle: "Someone"),
-//            ContactItem(title: "Mr C of D", subTitle: "Person of Interest")
-//          ])])
-        
-        CustomListView(listViewModel : bVM)
-        //CustomListView(listViewModel : contactsLVM)
+
+        SimpleListView(listViewModel : bVM)
             .environment(\.colorScheme, .dark)
     }
 }

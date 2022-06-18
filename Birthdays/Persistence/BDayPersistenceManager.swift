@@ -9,7 +9,7 @@ import Foundation
 
 var birthdayStore = [
     Birthday(name: "Prashanth", birthDay: Date()),
-    Birthday(name: "Sheia", birthDay: Date())
+    Birthday(name: "Sheia", birthDay: Date(), isFavorite: true)
 ]
 
 class BDayArrayPersistenceManager: PersistenceManager {

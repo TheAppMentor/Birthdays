@@ -1,13 +1,8 @@
 //
 //  BirthdaysApp.swift
 //  Birthdays
-//
-//  Created by Moorthy, Prashanth on 21/02/22.
-//
 
 import SwiftUI
-
-//let contactsLVM = ContactListViewModel()
 
 let birthdaysVM = BirthdayListViewModel(title: "Birthdays", persistenceManager: BDayArrayPersistenceManager())
 
@@ -15,7 +10,7 @@ let birthdaysVM = BirthdayListViewModel(title: "Birthdays", persistenceManager: 
 struct BirthdaysApp: App {
     var body: some Scene {
         WindowGroup {
-            CustomListView(listViewModel: birthdaysVM)
+            SimpleListView(listViewModel: birthdaysVM)
         }
     }
 }

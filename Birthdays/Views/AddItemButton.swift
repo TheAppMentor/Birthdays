@@ -11,6 +11,7 @@ import SwiftUI
 struct AddItemButton: View {
     
     @State private var showingAddItemSheet = false
+
     var onSuccessAction : (_ userInput : [String:Any]) -> ()
     
     var body: some View {
@@ -19,7 +20,6 @@ struct AddItemButton: View {
         } label: {
             Label("Add Item", systemImage: "person.crop.circle.fill.badge.plus")
                 .foregroundColor(.primary)
-            
         }.sheet(isPresented: $showingAddItemSheet) {
             AddItemSheetView { userInput in
                 print("AddItem Button : User Entered Something man \(userInput)")

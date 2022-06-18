@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Birthday : Persistable {
+struct Birthday: Persistable {
     var id: UUID = UUID()
     let name : String
     let birthDay : Date
@@ -18,5 +18,4 @@ struct Birthday : Persistable {
         self.birthDay = birthDay
         self.isFavorite = isFavorite
     }
-
 }

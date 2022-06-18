@@ -7,40 +7,32 @@
 
 import SwiftUI
 
+class BirthDayEntry: ObservableObject {
+    @Published var name: String
+    var birthDate: Date
+    var isFavorite: Bool
+
+    internal init(name: String, birthDate: Date, isFavorite: Bool = false) {
+        self.name = name
+        self.birthDate = birthDate
+        self.isFavorite = isFavorite
+    }
+}
+
 struct AddItemSheetView: View {
     
     @Environment(\.dismiss) var dismiss
-    @State var userName = ""
-    @State var selectedDate = Date()
+
+    @StateObject var tempBirthDay = BirthDayEntry(name: "", birthDate: Date())
     
     let onAdd : (_ userInput : [String: Any]) -> ()
        
     var body: some View {
         NavigationView {
-
-
             VStack {
-//                HStack() {
-//                    Spacer()
-//                    VStack {
-//                        Image(systemName: "person.circle.fill")
-//                            .antialiased(true) //for smooth edges for scale to fill
-//                            .resizable() // for resizing
-//                            .frame(width: 70, height: 70, alignment: .center)
-//                            .scaledToFill() // for filling image on ImageView
-//                            .foregroundColor(.brown)
-//                        Text("Foo")
-//                        Text("Foo")
-//                        Spacer()
-//                    }
-//                    Spacer()
-//                }
-//                .padding()
-//                .background(.gray)
-
-                AddBirthdayForm(userName: "", birthDate: Date(), isFavorite: false)
+                AddBirthdayForm(birthDayEntry: tempBirthDay)
                 .navigationBarTitleDisplayMode(.inline)
-                    .navigationTitle("Add")
+                    .navigationTitle("New Birthday")
                     .toolbar {
                         ToolbarItem(placement: ToolbarItemPlacement.navigationBarLeading) {
                             Button("Cancel") {
@@ -50,11 +42,9 @@ struct AddItemSheetView: View {
 
                         ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
                             Button("Add") {
-                                onAdd(["userName": userName, "birthday": selectedDate])
-                                //viewModel.addEntity(item: ["userName": userName, "birthday": selectedDate])
-                                //sharedPersistenceManager.add(entity: BirthdayItem(birthDayModel: BirthdayModel(name: userName, birthDay: selectedDate)))
+                                onAdd(["userName": tempBirthDay.name, "birthday": tempBirthDay.birthDate])
                                 dismiss()
-                            }.disabled(userName.isEmpty)
+                            }.disabled(tempBirthDay.name.isEmpty)
                         }
                 }
             }
